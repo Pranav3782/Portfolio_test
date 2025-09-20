@@ -1,0 +1,78 @@
+/* Define custom fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF8F0; /* Creamy off-white */
+            color: #1a1a1a;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Paytone One', sans-serif;
+        }
+
+        /* Page transition styles */
+        .page {
+            display: none; /* Hide all pages by default */
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .page.active {
+            display: block; /* Show active page */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Nav link active style */
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #7B61FF;
+            transition: width 0.3s;
+        }
+        .nav-link.active::after, .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Sticker styles */
+        .sticker {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Custom card styles for a playful look */
+        .custom-card {
+            background-color: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 1rem;
+            box-shadow: 4px 4px 0px #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px) translateX(-5px);
+            box-shadow: 8px 8px 0px #7B61FF;
+        }
+
+        /* Custom button style */
+        .custom-btn {
+             background-color: #FFD23F;
+             border: 2px solid #1a1a1a;
+             border-radius: 0.75rem;
+             box-shadow: 3px 3px 0px #1a1a1a;
+             transition: all 0.3s ease;
+        }
+        .custom-btn:hover {
+             transform: translateY(-3px) translateX(-3px);
+             box-shadow: 6px 6px 0px #1a1a1a;
+             background-color: #FFC300;
+        }
+        .custom-btn-secondary {
+            background-color: #90E0EF;
+        }
+         .custom-btn-secondary:hover {
+            background-color: #00B4D8;
+         }
